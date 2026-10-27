@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="Contact Ground to Superstructure about a sourcing requirement or procurement enquiry.">
+  <title>Contact | Ground to Superstructure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ground to Superstructure home"><span class="brand-mark">GTS</span><span class="brand-name">GROUND TO<br>SUPERSTRUCTURE</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="about.html">About GTS</a><a href="sourcing-solutions.html">Sourcing solutions</a><a href="product-categories.html">Product categories</a><a href="procurement-support.html">Procurement support</a><a href="tenders.html">Tenders</a><a href="contact.html" aria-current="page">Contact</a><a class="nav-cta" href="tenders.html#tender-form">Invite GTS to tender <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-hero section-shell">
+      <p class="eyebrow"><span class="eyebrow-line"></span> START A CONVERSATION</p>
+      <h1>Tell us what<br><span>you need to source.</span></h1>
+      <p class="page-lead">Share your requirement, the outcome you’re looking for and any useful project context. GTS can review the brief and discuss whether further sourcing work may be appropriate.</p>
+      <div class="page-actions"><a class="button button-gold" href="#requirement-form">Submit a sourcing requirement <span aria-hidden="true">↘</span></a><a class="button button-outline" href="tenders.html#tender-form">Invite GTS to tender <span aria-hidden="true">↗</span></a></div>
+      <div class="page-orbit" aria-hidden="true"></div>
+    </section>
+    <section class="tender-section section-shell contact-form-section">
+      <div class="tender-heading">
+        <div><p class="eyebrow">SOURCING ENQUIRY</p><h2>Start with<br>the essentials.</h2></div>
+        <div class="tender-intro"><p>Useful information includes the product or service, specification, quantity, delivery location, timing and any priorities. You can also add supporting documents for your email draft.</p></div>
+      </div>
+      <form class="enquiry-form standalone-form requirement-form" id="requirement-form">
+        <div class="form-heading"><span class="form-kicker">SOURCING ENQUIRY</span><h3>What are you looking to source?</h3><p>Share the outcome you’re looking for. GTS can clarify details with you if appropriate.</p></div>
+        <div class="form-row"><label>Company<input name="company" autocomplete="organization" required></label><label>Project<input name="project"></label></div>
+        <div class="form-row"><label>Contact name<input name="contact" autocomplete="name" required></label><label>Contact email<input name="email" type="email" autocomplete="email" required></label></div>
+        <label>What are you looking to source?<textarea name="requirement" rows="5" required></textarea></label>
+        <div class="form-row"><label>Quantity / scope<input name="quantity"></label><label>Delivery location<input name="location" autocomplete="shipping address-level2"></label></div>
+        <label>Required date<input name="required-date" type="date"></label>
+        <label class="file-field">Supporting documents<input name="documents" type="file" multiple><span class="file-help">Add specifications, images or other useful files. Files must be attached manually to the email draft before sending.</span></label>
+        <button class="button button-gold form-submit" type="submit">Prepare enquiry email <span aria-hidden="true">↗</span></button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+      <p class="form-disclosure">This form does not send or store information on this website. GTS's approved contact details are not yet configured, so an email cannot currently be prepared. Once configured, you will need to review and send the email yourself and add any attachments manually.</p>
+    </section>
+    <section class="page-band">
+      <div class="section-shell page-band-grid"><div><p class="eyebrow">TENDER OR PROCUREMENT OPPORTUNITY?</p><h2>Invite GTS<br><span>to the conversation.</span></h2></div><p>For an RFI, RFQ, RFP, ITT or project-specific tender, include relevant specifications, quantity schedules and delivery programmes. Visit the Tenders page to prepare a dedicated enquiry.</p><a class="button button-outline" href="tenders.html#tender-form">Go to tender enquiries <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer section-shell"><a class="brand" href="index.html" aria-label="Ground to Superstructure home"><span class="brand-mark">GTS</span><span class="brand-name">GROUND TO<br>SUPERSTRUCTURE</span></a><p>Independent sourcing. Considered supply.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="about.html">About</a><a href="sourcing-solutions.html">Sourcing</a><a href="product-categories.html">Categories</a><a href="procurement-support.html">Support</a><a href="tenders.html">Tenders</a><a href="contact.html">Contact</a></nav><a class="back-to-top" href="#main">Back to top ↑</a><span class="copyright">© <span id="year"></span> Ground to Superstructure</span></footer>
+</body>
+</html>
