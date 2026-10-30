@@ -3273,13 +3273,14 @@ html.motion-enabled .motion-reveal.is-visible {
 .hero-art-index { position: absolute; z-index: 4; top: 24px; right: 24px; color: #f1eee7; font-family: "Cormorant Garamond", Georgia, serif; font-size: 16px; letter-spacing: .08em; }
 .hero-art-index span { margin-left: 7px; color: #e4c57f; font-family: var(--font-body); font-size: 8px; letter-spacing: .12em; }
 
-.home-process-strip { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(200px, .7fr) 1.8fr; align-items: center; gap: 30px; margin-top: -1px; padding-block: 22px; border-block: 1px solid rgba(201, 164, 76, .22); }
-.home-process-label { margin: 0; color: #9c978a; font-size: 8px; font-weight: 700; letter-spacing: .15em; }
-.home-process-strip ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
-.home-process-strip li { display: flex; align-items: center; gap: 11px; min-height: 30px; padding-inline: 16px; border-left: 1px solid rgba(201, 164, 76, .2); }
-.home-process-strip li:first-child { border-left: 0; }
-.home-process-strip li span { color: #a28a56; font-family: "Cormorant Garamond", Georgia, serif; font-size: 15px; }
-.home-process-strip li strong { color: #eee9dc; font-size: 9px; letter-spacing: .13em; }
+.home-process-strip { position: relative; z-index: 1; overflow: hidden; margin-top: -1px; padding-block: 13px; background: var(--gold); color: #17140e; }
+.home-process-track { display: flex; width: max-content; animation: home-process-scroll 28s linear infinite; }
+.home-process-group { display: flex; flex: 0 0 auto; align-items: center; gap: clamp(30px, 5vw, 72px); margin: 0; padding: 0 clamp(20px, 3vw, 44px) 0 0; list-style: none; }
+.home-process-group li { display: flex; flex: 0 0 auto; align-items: baseline; gap: 8px; white-space: nowrap; }
+.home-process-group li::after { margin-left: clamp(8px, 2vw, 24px); color: rgba(23, 20, 14, .55); font-size: 10px; content: "✦"; }
+.home-process-group li span { color: rgba(23, 20, 14, .65); font-family: "Cormorant Garamond", Georgia, serif; font-size: 13px; }
+.home-process-group li strong { color: #17140e; font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(15px, 1.7vw, 19px); font-style: italic; font-weight: 600; letter-spacing: .02em; }
+@keyframes home-process-scroll { to { transform: translateX(-50%); } }
 
 .home-page #requirements .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
 .home-page #requirements .category-card { min-height: 285px; padding: 130px 19px 19px; border: 1px solid rgba(23, 25, 26, .12); box-shadow: 0 10px 24px rgba(27, 24, 17, .05); transition: transform .22s ease, box-shadow .22s ease; }
@@ -3300,8 +3301,6 @@ html.motion-enabled .motion-reveal.is-visible {
   .home-page .hero { grid-template-columns: 1fr; min-height: 0; gap: 0; padding-block: 48px 35px; }
   .home-page .hero h1 { max-width: 720px; font-size: clamp(42px, 6vw, 56px); }
   .home-page .hero-art { min-height: 380px; margin-top: 27px; }
-  .home-process-strip { grid-template-columns: 1fr; gap: 13px; padding-block: 18px; }
-  .home-process-strip li:first-child { padding-left: 0; }
 }
 
 @media (max-width: 800px) {
@@ -3317,10 +3316,6 @@ html.motion-enabled .motion-reveal.is-visible {
   .home-page .hero-actions .button { width: 100%; }
   .home-page .hero-art { width: 100%; min-height: 340px; margin-top: 28px; }
   .home-process-strip { margin-top: 0; }
-  .home-process-strip ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
-  .home-process-strip li { min-height: 42px; padding-inline: 13px; }
-  .home-process-strip li:nth-child(odd) { border-left: 0; }
-  .home-process-strip li:nth-child(n+3) { border-top: 1px solid rgba(201, 164, 76, .15); }
   .home-page #requirements .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -3331,8 +3326,12 @@ html.motion-enabled .motion-reveal.is-visible {
   .hero-trade-inset img { width: 55px; height: 48px; }
   .hero-trade-inset span { font-size: 7px; }
   .home-page .art-caption { top: 18px; right: 18px; bottom: auto; left: auto; padding: 9px; font-size: 7px; }
-  .home-process-strip li { gap: 8px; padding-inline: 8px; }
-  .home-process-strip li strong { font-size: 8px; }
   .home-page #requirements .category-grid { grid-template-columns: 1fr; }
   .home-page #requirements .category-card { min-height: 275px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-process-track { width: 100%; }
+  .home-process-group { width: 100%; flex-wrap: wrap; justify-content: center; gap: 12px 24px; padding-right: 0; }
+  .home-process-group[aria-hidden="true"] { display: none; }
 }
