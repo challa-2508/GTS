@@ -6,55 +6,128 @@
   <meta name="theme-color" content="#10100f">
   <meta name="description" content="Invite Ground to Superstructure to review a tender, RFI, RFQ, RFP, ITT or project-specific sourcing opportunity.">
   <title>Tenders | Ground to Superstructure</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ground to Superstructure">
+  <meta property="og:title" content="Tenders | Ground to Superstructure">
+  <meta property="og:description" content="Invite Ground to Superstructure to review a tender, RFI, RFQ, RFP, ITT or project-specific sourcing opportunity.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tenders | Ground to Superstructure">
+  <meta name="twitter:description" content="Invite Ground to Superstructure to review a tender, RFI, RFQ, RFP, ITT or project-specific sourcing opportunity.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="tenders-page">
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ground to Superstructure home"><span class="brand-mark">GTS</span><span class="brand-name">GROUND TO<br>SUPERSTRUCTURE</span></a>
+  <header class="site-header tenders-header">
+    <a class="brand tender-brand" href="index.html" aria-label="Ground to Superstructure home"><span class="tender-brand-mark" aria-hidden="true">G<sup>TS</sup></span><span class="tender-brand-copy"><strong>Ground to Superstructure</strong><small>PROCUREMENT &amp; SOURCING</small></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="index.html">Home</a><a href="about.html">About GTS</a><a href="sourcing-solutions.html">Sourcing solutions</a><a href="product-categories.html">Product categories</a><a href="procurement-support.html">Procurement support</a><a href="tenders.html" aria-current="page">Tenders</a><a href="contact.html">Contact</a><a class="nav-cta" href="tenders.html#tender-form">Invite GTS to tender <span aria-hidden="true">↗</span></a>
+      <a href="index.html">Home</a><a href="about.html">About GTS</a><a href="sourcing-solutions.html">Sourcing Solutions</a><a href="product-categories.html">Product Categories</a><a href="procurement-support.html">Procurement Support</a><a href="tenders.html" aria-current="page">Tenders</a><a href="contact.html">Contact</a><a class="nav-cta" href="#tender-form">Invite GTS to Tender <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
   <main id="main">
-    <section class="page-hero section-shell">
-      <p class="eyebrow"><span class="eyebrow-line"></span> TENDERS &amp; PROCUREMENT ENQUIRIES</p>
-      <h1>Put GTS in<br><span>the conversation.</span></h1>
-      <p class="page-lead">GTS welcomes procurement enquiries, RFIs, RFQs, RFPs, ITTs and project-specific sourcing opportunities. Share the context and relevant documents for review.</p>
-      <p class="tender-document-types">RFI <span>•</span> RFQ <span>•</span> RFP <span>•</span> ITT <span>•</span> BOQ <span>•</span> SPECIFICATIONS <span>•</span> DRAWINGS</p>
-      <div class="page-actions"><a class="button button-gold" href="#tender-form">Invite GTS to tender <span aria-hidden="true">↘</span></a><a class="button button-outline" href="contact.html#requirement-form">Submit a sourcing requirement <span aria-hidden="true">↗</span></a></div>
-      <div class="page-orbit" aria-hidden="true"></div>
-    </section>
-    <section class="tender-section section-shell">
-      <div class="tender-heading">
-        <div><p class="eyebrow">SHARE THE OPPORTUNITY</p><h2>Tell us about<br>the tender.</h2></div>
-        <div class="tender-intro"><p>Relevant documents may include Bills of Quantities, specifications, drawings, product and quantity schedules, compliance requirements and delivery programmes. Only share information you are authorised to disclose.</p><p class="tender-document-types">BOQs <span>•</span> SPECIFICATIONS <span>•</span> DRAWINGS <span>•</span> PRODUCT SCHEDULES <span>•</span> DELIVERY PROGRAMMES</p></div>
-      </div>
-      <form class="enquiry-form standalone-form" id="tender-form">
-        <div class="form-heading"><span class="form-kicker">TENDER ENQUIRY</span><h3>Invite GTS to tender</h3><p>Provide the essentials so the opportunity can be reviewed.</p></div>
-        <div class="form-row"><label>Company<input name="company" autocomplete="organization" required></label><label>Project<input name="project" required></label></div>
-        <div class="form-row"><label>Contact name<input name="contact" autocomplete="name" required></label><label>Contact email<input name="email" type="email" autocomplete="email" required></label></div>
-        <label>Tender / requirement details<textarea name="requirement" rows="4" required></textarea></label>
-        <div class="form-row"><label>Quantity / scope<input name="quantity"></label><label>Delivery location<input name="location" autocomplete="shipping address-level2"></label></div>
-        <div class="form-row"><label>Required date<input name="required-date" type="date"></label><label>Tender closing date<input name="closing-date" type="date"></label></div>
-        <label class="file-field">Tender documents<input name="documents" type="file" multiple><span class="file-help">Add BOQs, specifications, drawings or other relevant files. Files must be attached manually to the email draft before sending.</span></label>
-        <button class="button button-gold form-submit" type="submit">Prepare tender email <span aria-hidden="true">↗</span></button>
-        <p class="form-status" aria-live="polite"></p>
-      </form>
-      <p class="form-disclosure">This form does not send or store information on this website. GTS's approved contact details are not yet configured, so an email cannot currently be prepared. Once configured, you will need to review and send the email yourself and add any attachments manually. Tender opportunities are subject to review and agreement on scope.</p>
-    </section>
-    <section class="readiness-section">
-      <div class="section-shell readiness-grid">
-        <div><p class="eyebrow">PROCUREMENT &amp; TENDER READINESS</p><h2>Clear information.<br><span>Responsible commitments.</span></h2></div>
-        <div class="readiness-copy"><p>Documentation requirements and the information relevant to each opportunity are considered case by case. No certification, accreditation, supplier history or capacity is implied.</p><div class="readiness-tags"><span>Specifications</span><span>Quantity schedules</span><span>Delivery programmes</span><span>Compliance details</span><span>Project requirements</span></div></div>
+    <section class="tender-hero" id="top" aria-labelledby="tender-title">
+      <div class="tender-hero-grid">
+        <div class="tender-hero-heading"><p class="tender-eyebrow"><span></span>TENDERS &amp; PROCUREMENT ENQUIRIES</p><h1 id="tender-title">Invite GTS<br><em>to Tender</em></h1><p class="tender-hero-tagline">YOUR REQUIREMENT.<br><strong>OUR SOURCING SOLUTION.</strong></p></div>
+        <div class="tender-hero-copy"><div class="tender-hero-panel"><p>Organisations can invite GTS to respond to sourcing and supply opportunities by sharing their requirements and tender documentation for review.</p><p>Tell us what you need. Give us the specification, quantity, required delivery date and location. GTS will investigate the market and assess an appropriate sourcing response.</p><div class="tender-hero-actions"><a class="tender-action tender-action-primary" href="#tender-form">Start a tender enquiry <span aria-hidden="true">↓</span></a><a class="tender-action" href="contact.html#requirement-form">Submit a Sourcing Requirement <span aria-hidden="true">→</span></a></div></div><p class="tender-hero-image-note">PROJECTS · PROCUREMENT · SUPPLY</p></div>
       </div>
     </section>
+    <section class="tender-documents" aria-labelledby="documents-title">
+      <div class="section-shell">
+        <div class="tender-section-heading"><p class="tender-eyebrow"><span></span>TENDER INFORMATION</p><h2 id="documents-title">Relevant Tender Documents</h2><p>Share the information needed for a clear, proportionate assessment of the opportunity. The documents required will vary by project and procurement route.</p></div>
+        <div class="tender-document-grid">
+          <article class="tender-document"><span>01</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h12l7 7v19H7zM19 3v8h7M11 17h11M11 21h11M11 25h7"/></svg><div><h3>RFI</h3><p>Request for Information</p></div></article>
+          <article class="tender-document"><span>02</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v18H5zM9 12h14M9 17h9M9 21h7M22 20l2 2 4-5"/></svg><div><h3>RFQ</h3><p>Request for Quotation</p></div></article>
+          <article class="tender-document"><span>03</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 4h20v24H6zM10 10h12M10 15h12M10 20h8M10 24h6"/><path d="m20 23 2 2 4-5"/></svg><div><h3>RFP</h3><p>Request for Proposal</p></div></article>
+          <article class="tender-document"><span>04</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h12l7 7v19H7zM19 3v8h7M11 17h11M11 21h11M11 25h7"/><path d="m20 19 2 2 4-5"/></svg><div><h3>ITT</h3><p>Invitation to Tender</p></div></article>
+          <article class="tender-document"><span>05</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v19H5zM9 12h14M9 17h14M9 22h7M21 19v6M18 22h6"/></svg><div><h3>BOQ</h3><p>Bills of Quantities</p></div></article>
+          <article class="tender-document"><span>06</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h18v26H7zM11 9h10M11 14h10M11 19h6M11 24h8"/></svg><div><h3>Specifications</h3><p>Technical and performance requirements</p></div></article>
+          <article class="tender-document"><span>07</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24 12 8l7 11 4-6 5 11zM4 27h24M8 5h16"/></svg><div><h3>Drawings</h3><p>Relevant design and construction drawings</p></div></article>
+          <article class="tender-document"><span>08</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 8h24v17H4zM4 13h24M11 13v12M8 5h16M15 17h9M15 21h7"/></svg><div><h3>Product Schedules</h3><p>Product and material schedules</p></div></article>
+          <article class="tender-document"><span>09</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 5h20v23H6zM10 10h12M10 15h12M10 20h5M19 19v7M16 22h6"/></svg><div><h3>Quantity Schedules</h3><p>Itemised quantity requirements</p></div></article>
+          <article class="tender-document"><span>10</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 24h24M7 20h5v4H7zM14 15h5v9h-5zM21 9h5v15h-5zM7 5h18"/></svg><div><h3>Delivery Programmes</h3><p>Required phasing and key dates</p></div></article>
+          <article class="tender-document"><span>11</span><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h12l7 7v19H7zM19 3v8h7M11 17h11M11 21h11M11 25h7"/><circle cx="23" cy="24" r="4"/><path d="M23 22v4M21 24h4"/></svg><div><h3>Supporting Documents</h3><p>Other information relevant to the enquiry</p></div></article>
+        </div>
+        <aside class="tender-important"><span>IMPORTANT</span><p>Use an approved submission method for tender documentation. Do not enter confidential or commercially sensitive information in this website form; it does not transmit or store submissions.</p></aside>
+      </div>
+    </section>
+    <section class="tender-form-section" aria-labelledby="invitation-title">
+      <div class="section-shell tender-form-layout">
+        <aside class="tender-process"><p class="tender-eyebrow"><span></span>TENDER INVITATION</p><h2 id="invitation-title">Tell us about<br>the opportunity.</h2><p>Provide the core project, requirement and programme information. GTS can review the enquiry and consider whether a sourcing route may be appropriate.</p><div class="tender-process-steps" aria-label="Tender review process"><div><span>01</span><p>Submit project and requirement details</p></div><div><span>02</span><p>GTS reviews scope and potential sourcing routes</p></div><div><span>03</span><p>Opportunity assessed against programme</p></div></div></aside>
+        <form class="enquiry-form tender-form" id="tender-form">
+          <nav class="tender-form-progress" aria-label="Tender enquiry form sections">
+            <a href="#tender-step-organisation"><span>01</span><strong>Project</strong></a>
+            <a href="#tender-step-requirement"><span>02</span><strong>Requirement</strong></a>
+            <a href="#tender-step-documents"><span>03</span><strong>Documents</strong></a>
+            <a href="#tender-step-confirmation"><span>04</span><strong>Review</strong></a>
+          </nav>
+          <div class="tender-form-title"><div><span class="form-kicker">INVITATION FORM</span><h3>Project enquiry details</h3></div><p><span aria-hidden="true">*</span> Required field</p></div>
+          <fieldset class="tender-form-step" id="tender-step-organisation"><legend><span>01</span> Organisation &amp; Project</legend>
+            <div class="form-row"><label>Company / Organisation *<input name="company" autocomplete="organization" placeholder="Organisation name" required></label><label>Project Name *<input name="project" placeholder="Project name" required></label></div>
+            <div class="form-row"><label>Tender / Project Reference<input name="reference" placeholder="Your reference (optional)"></label><label>Contact Name *<input name="contact" autocomplete="name" placeholder="Full name" required></label></div>
+            <div class="form-row"><label>Business Email *<input name="email" type="email" autocomplete="email" placeholder="name@organisation.co.uk" required></label><label>Telephone <span class="optional-label">OPTIONAL</span><input name="telephone" type="tel" autocomplete="tel" placeholder="+44 (0)..."></label></div>
+          </fieldset>
+          <fieldset class="tender-form-step" id="tender-step-requirement"><legend><span>02</span> Requirement Details</legend>
+            <label>Requirement Title *<input name="requirement-title" placeholder="A concise title for the requirement" required></label>
+            <label>Detailed Scope / Requirement *<textarea name="requirement" rows="4" placeholder="Describe the products or services, performance requirements, programme and any key constraints." required></textarea></label>
+            <label>Product or Service Category<select name="category"><option value="">Select a category</option><option>Construction Materials</option><option>Interiors &amp; FF&amp;E</option><option>Electrical &amp; MEP</option><option>Bespoke &amp; Manufactured</option><option>High-Volume Sourcing</option><option>Major Assets &amp; Transport</option><option>Other sourcing requirement</option></select></label>
+            <div class="form-row"><label>Estimated Quantity *<input name="quantity" type="number" min="1" placeholder="Enter quantity" required></label><label>Unit of Measurement<select name="unit"><option value="">Select unit</option><option>Pieces</option><option>Tonnes</option><option>Metres</option><option>Square metres</option><option>Cubic metres</option><option>Other</option></select></label></div>
+            <label>Delivery Location *<input name="location" autocomplete="shipping street-address" placeholder="Full address, town or city, and postcode" required></label>
+            <div class="form-row"><label>Required Delivery Date *<input name="required-date" type="date" required></label><label>Tender Closing Date *<input name="closing-date" type="date" required></label></div>
+          </fieldset>
+          <fieldset class="tender-form-step" id="tender-step-documents"><legend><span>03</span> Supporting Documents</legend>
+            <div class="upload-heading"><h4>Supporting Tender Documentation</h4><p>Attach relevant documents to help GTS understand the requirement. Selecting files here does not upload or store them.</p></div>
+            <ul class="document-checklist"><li>RFI / RFQ / RFP / ITT</li><li>Bills of Quantities</li><li>Product Specifications</li><li>Drawings</li><li>Product Schedules</li><li>Quantity Schedules</li><li>Delivery Programmes</li><li>Other Supporting Documents</li></ul>
+            <label class="tender-file-field"><span class="upload-symbol" aria-hidden="true">+</span><strong>Choose tender documents</strong><span>PDF, Word, Excel, CSV, DWG, DXF, JPG or PNG · Maximum 20 MB per file</span><input name="documents" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.dwg,.dxf,.jpg,.jpeg,.png"><span class="selected-files" aria-live="polite">No files selected</span></label>
+          </fieldset>
+          <fieldset class="tender-form-step tender-confirmation" id="tender-step-confirmation"><legend><span>04</span> Confirmation &amp; Submission</legend>
+            <label class="privacy-confirmation"><input name="privacy-acknowledgement" type="checkbox" required><span>I understand that this enquiry is not submitted or stored by this website. <a href="#privacy-notice">View privacy notice</a>.</span></label>
+            <button class="button button-gold form-submit" type="submit">Prepare tender enquiry <span aria-hidden="true">→</span></button>
+            <p class="form-status" aria-live="polite"></p>
+            <p class="submission-note">Submitting an enquiry does not guarantee that GTS will submit a tender or accept an opportunity. Each requirement is subject to review.</p>
+          </fieldset>
+          <p class="tender-data-disclosure">The enquiry recipient and secure document handling are not configured. This form does not send, upload or store your information. Do not include confidential documents until an approved submission method is provided.</p>
+        </form>
+      </div>
+    </section>
+    <section class="tender-readiness" aria-labelledby="readiness-title">
+      <div class="section-shell">
+        <div class="readiness-intro"><p class="tender-eyebrow"><span></span>PROCUREMENT STANDARDS</p><h2 id="readiness-title">Procurement &amp; Tender<br>Readiness</h2><p>GTS recognises the importance of transparent procurement processes and appropriate supporting documentation when responding to project opportunities.</p><p>Documentation requirements will be reviewed against the needs of each enquiry. Relevant company information, policies and supporting documents can be identified and discussed as appropriate.</p></div>
+        <div class="readiness-list">
+          <article><span>01</span><div><h3>Company Information</h3><p>Corporate details relevant to the enquiry.</p></div></article>
+          <article><span>02</span><div><h3>Financial Information</h3><p>Information requested for proportionate commercial review.</p></div></article>
+          <article><span>03</span><div><h3>Relevant Experience</h3><p>Applicable project and sector context, where available.</p></div></article>
+          <article><span>04</span><div><h3>Health &amp; Safety</h3><p>Policies and information relevant to the requirement.</p></div></article>
+          <article><span>05</span><div><h3>Quality</h3><p>Quality processes appropriate to the proposed supply route.</p></div></article>
+          <article><span>06</span><div><h3>Environmental &amp; Sustainability</h3><p>Relevant environmental considerations and documentation.</p></div></article>
+          <article><span>07</span><div><h3>ESG / Social Value</h3><p>Enquiry-specific environmental, social and governance requirements.</p></div></article>
+          <article><span>08</span><div><h3>Supply Chain &amp; Responsible Sourcing</h3><p>Supplier assessment and responsible sourcing considerations.</p></div></article>
+          <article><span>09</span><div><h3>Insurance</h3><p>Project-specific insurance requirements for review.</p></div></article>
+          <article><span>10</span><div><h3>Policies &amp; Documentation</h3><p>Additional policies and supporting information as requested.</p></div></article>
+        </div>
+        <p class="readiness-disclaimer">These categories indicate the types of information that may be relevant to procurement and tender evaluation. They do not imply that every document or credential is held or applicable.</p>
+      </div>
+    </section>
+    <section class="tender-position">
+      <div class="section-shell tender-position-inner"><p class="tender-eyebrow"><span></span>AN INDEPENDENT APPROACH</p><h2>Commercial sourcing,<br><em>coordinated with clarity.</em></h2><p>GTS is an independent British procurement and sourcing business, providing a commercially focused extension to a client’s procurement capability. Depending on the requirement, GTS can coordinate potential supply routes through manufacturers, distributors, merchants and specialist third parties. Any response depends on the project scope, availability, commercial terms and required programme.</p><a class="tender-action tender-action-primary" href="contact.html#requirement-form">Discuss an Opportunity <span aria-hidden="true">→</span></a></div>
+    </section>
+    <details class="tender-privacy section-shell" id="privacy-notice"><summary>Privacy notice</summary><p>Enquiry information and supporting documents should only be used to assess and respond to the relevant procurement opportunity. This website does not transmit or store form submissions. Secure handling, retention and submission arrangements must be confirmed before a live submission service is connected.</p></details>
   </main>
-  <footer class="site-footer section-shell"><a class="brand" href="index.html" aria-label="Ground to Superstructure home"><span class="brand-mark">GTS</span><span class="brand-name">GROUND TO<br>SUPERSTRUCTURE</span></a><p>Independent sourcing. Considered supply.</p><nav class="footer-nav" aria-label="Footer navigation"><a href="about.html">About</a><a href="sourcing-solutions.html">Sourcing</a><a href="product-categories.html">Categories</a><a href="procurement-support.html">Support</a><a href="tenders.html">Tenders</a><a href="contact.html">Contact</a></nav><a class="back-to-top" href="#main">Back to top ↑</a><span class="copyright">© <span id="year"></span> Ground to Superstructure</span></footer>
+  <footer class="gts-footer">
+    <div class="section-shell gts-footer-grid">
+      <div class="gts-footer-company">
+        <a class="brand" href="index.html" aria-label="Ground to Superstructure home"><span class="gts-footer-emblem" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="14"/><path d="M16 2v28M2 16h28M16 12v8M12 16h8"/></svg></span><span class="brand-mark">GTS</span><span class="brand-name">GROUND TO<br>SUPERSTRUCTURE</span></a>
+        <p class="gts-footer-motto">SOURCE · SUPPLY · COORDINATE · DELIVER</p>
+        <p>GTS is an independent procurement and sourcing business that helps clients investigate supply options and coordinate arrangements through third parties.</p>
+      </div>
+      <nav class="gts-footer-navigation" aria-label="Footer navigation"><h2>NAVIGATE</h2><a href="index.html">Home</a><a href="about.html">About GTS</a><a href="sourcing-solutions.html">Sourcing Solutions</a><a href="product-categories.html">Product Categories</a><a href="procurement-support.html">Procurement Support</a><a href="tenders.html">Tenders</a><a href="contact.html">Contact</a></nav>
+      <div class="gts-footer-conversation"><h2>START A CONVERSATION</h2><p>For enquiries, please use the enquiry form on our Contact page.</p><a class="button button-gold" href="tenders.html#tender-form">Invite GTS to Tender</a></div>
+    </div>
+    <div class="section-shell gts-footer-copyright">© GTS. All rights reserved.<span id="year" hidden></span></div>
+  </footer>
 </body>
 </html>
