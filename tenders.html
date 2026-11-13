@@ -13,6 +13,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tenders | Ground to Superstructure">
   <meta name="twitter:description" content="Invite Ground to Superstructure to review a tender, RFI, RFQ, RFP, ITT or project-specific sourcing opportunity.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,7 @@
 <body class="tenders-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header tenders-header">
-    <a class="brand tender-brand" href="index.html" aria-label="Ground to Superstructure home"><span class="tender-brand-mark" aria-hidden="true">G<sup>TS</sup></span><span class="tender-brand-copy"><strong>Ground to Superstructure</strong><small>PROCUREMENT &amp; SOURCING</small></span></a>
+    <a class="brand" href="index.html" aria-label="Ground to Superstructure home"><img class="brand-logo" src="images/gts-logo.png" alt="Ground to Superstructure" width="135" height="56"></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <a href="index.html">Home</a><a href="about.html">About GTS</a><a href="sourcing-solutions.html">Sourcing Solutions</a><a href="product-categories.html">Product Categories</a><a href="procurement-support.html">Procurement Support</a><a href="tenders.html" aria-current="page">Tenders</a><a href="contact.html">Contact</a><a class="nav-cta" href="#tender-form">Invite GTS to Tender <span aria-hidden="true">↗</span></a>
@@ -33,7 +34,7 @@
     <section class="tender-hero" id="top" aria-labelledby="tender-title">
       <div class="tender-hero-grid">
         <div class="tender-hero-heading"><p class="tender-eyebrow"><span></span>TENDERS &amp; PROCUREMENT ENQUIRIES</p><h1 id="tender-title">Invite GTS<br><em>to Tender</em></h1><p class="tender-hero-tagline">YOUR REQUIREMENT.<br><strong>OUR SOURCING SOLUTION.</strong></p></div>
-        <div class="tender-hero-copy"><div class="tender-hero-panel"><p>Organisations can invite GTS to respond to sourcing and supply opportunities by sharing their requirements and tender documentation for review.</p><p>Tell us what you need. Give us the specification, quantity, required delivery date and location. GTS will investigate the market and assess an appropriate sourcing response.</p><div class="tender-hero-actions"><a class="tender-action tender-action-primary" href="#tender-form">Start a tender enquiry <span aria-hidden="true">↓</span></a><a class="tender-action" href="contact.html#requirement-form">Submit a Sourcing Requirement <span aria-hidden="true">→</span></a></div></div><p class="tender-hero-image-note">PROJECTS · PROCUREMENT · SUPPLY</p></div>
+        <div class="tender-hero-copy"><div class="tender-hero-panel"><p>Drawing upon 35 years of procurement experience, GTS invites organisations, principal contractors and procurement directors to share their requirements, specifications and tender documentation for rigorous commercial review.</p><p>Tell us what you need. Give us the specification, quantity, required delivery date and location. GTS will investigate the market and assess an appropriate sourcing response.</p><div class="tender-hero-actions"><a class="tender-action tender-action-primary" href="#tender-form">Start a tender enquiry <span aria-hidden="true">↓</span></a><a class="tender-action" href="contact.html#requirement-form">Submit a Sourcing Requirement <span aria-hidden="true">→</span></a></div></div><p class="tender-hero-image-note">PROJECTS &bull; PROCUREMENT &bull; SUPPLY</p></div>
       </div>
     </section>
     <section class="tender-documents" aria-labelledby="documents-title">
@@ -74,7 +75,7 @@
           <fieldset class="tender-form-step" id="tender-step-requirement"><legend><span>02</span> Requirement Details</legend>
             <label>Requirement Title *<input name="requirement-title" placeholder="A concise title for the requirement" required></label>
             <label>Detailed Scope / Requirement *<textarea name="requirement" rows="4" placeholder="Describe the products or services, performance requirements, programme and any key constraints." required></textarea></label>
-            <label>Product or Service Category<select name="category"><option value="">Select a category</option><option>Construction Materials</option><option>Interiors &amp; FF&amp;E</option><option>Electrical &amp; MEP</option><option>Bespoke &amp; Manufactured</option><option>High-Volume Sourcing</option><option>Major Assets &amp; Transport</option><option>Other sourcing requirement</option></select></label>
+            <label>Product or Service Category<select name="category"><option value="">Select a category</option><option>Timber &amp; Sheet Materials</option><option>Thermal &amp; Acoustic Insulation</option><option>Sanitaryware &amp; Washrooms</option><option>Commercial Furniture &amp; FF&amp;E</option><option>Electrical &amp; MEP</option><option>Bespoke &amp; Manufactured</option><option>High-Volume Sourcing</option><option>Specialist Assets &amp; Transport</option><option>Other sourcing requirement</option></select></label>
             <div class="form-row"><label>Estimated Quantity *<input name="quantity" type="number" min="1" placeholder="Enter quantity" required></label><label>Unit of Measurement<select name="unit"><option value="">Select unit</option><option>Pieces</option><option>Tonnes</option><option>Metres</option><option>Square metres</option><option>Cubic metres</option><option>Other</option></select></label></div>
             <label>Delivery Location *<input name="location" autocomplete="shipping street-address" placeholder="Full address, town or city, and postcode" required></label>
             <div class="form-row"><label>Required Delivery Date *<input name="required-date" type="date" required></label><label>Tender Closing Date *<input name="closing-date" type="date" required></label></div>
@@ -82,7 +83,7 @@
           <fieldset class="tender-form-step" id="tender-step-documents"><legend><span>03</span> Supporting Documents</legend>
             <div class="upload-heading"><h4>Supporting Tender Documentation</h4><p>Attach relevant documents to help GTS understand the requirement. Selecting files here does not upload or store them.</p></div>
             <ul class="document-checklist"><li>RFI / RFQ / RFP / ITT</li><li>Bills of Quantities</li><li>Product Specifications</li><li>Drawings</li><li>Product Schedules</li><li>Quantity Schedules</li><li>Delivery Programmes</li><li>Other Supporting Documents</li></ul>
-            <label class="tender-file-field"><span class="upload-symbol" aria-hidden="true">+</span><strong>Choose tender documents</strong><span>PDF, Word, Excel, CSV, DWG, DXF, JPG or PNG · Maximum 20 MB per file</span><input name="documents" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.dwg,.dxf,.jpg,.jpeg,.png"><span class="selected-files" aria-live="polite">No files selected</span></label>
+            <label class="tender-file-field"><span class="upload-symbol" aria-hidden="true">+</span><strong>Choose tender documents</strong><span>PDF, Word, Excel, CSV, DWG, DXF, JPG or PNG &bull; Maximum 20 MB per file</span><input name="documents" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.dwg,.dxf,.jpg,.jpeg,.png"><span class="selected-files" aria-live="polite">No files selected</span></label>
           </fieldset>
           <fieldset class="tender-form-step tender-confirmation" id="tender-step-confirmation"><legend><span>04</span> Confirmation &amp; Submission</legend>
             <label class="privacy-confirmation"><input name="privacy-acknowledgement" type="checkbox" required><span>I understand that this enquiry is not submitted or stored by this website. <a href="#privacy-notice">View privacy notice</a>.</span></label>
@@ -120,8 +121,7 @@
   <footer class="gts-footer">
     <div class="section-shell gts-footer-grid">
       <div class="gts-footer-company">
-        <a class="brand" href="index.html" aria-label="Ground to Superstructure home"><span class="gts-footer-emblem" aria-hidden="true"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="14"/><path d="M16 2v28M2 16h28M16 12v8M12 16h8"/></svg></span><span class="brand-mark">GTS</span><span class="brand-name">GROUND TO<br>SUPERSTRUCTURE</span></a>
-        <p class="gts-footer-motto">SOURCE · SUPPLY · COORDINATE · DELIVER</p>
+        <a class="brand footer-brand" href="index.html" aria-label="Ground to Superstructure home"><img class="brand-logo footer-logo" src="images/gts-logo.png" alt="Ground to Superstructure - SOURCE &bull; SUPPLY &bull; COORDINATE &bull; DELIVER" width="160" height="66"></a>
         <p>GTS is an independent procurement and sourcing business that helps clients investigate supply options and coordinate arrangements through third parties.</p>
       </div>
       <nav class="gts-footer-navigation" aria-label="Footer navigation"><h2>NAVIGATE</h2><a href="index.html">Home</a><a href="about.html">About GTS</a><a href="sourcing-solutions.html">Sourcing Solutions</a><a href="product-categories.html">Product Categories</a><a href="procurement-support.html">Procurement Support</a><a href="tenders.html">Tenders</a><a href="contact.html">Contact</a></nav>
