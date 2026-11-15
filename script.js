@@ -179,3 +179,37 @@ document.querySelectorAll(".enquiry-form").forEach((form) => {
     window.location.href = mailto;
   });
 });
+
+// ── GTS Visual Excellence – Enhanced Interactions ──────────────────────
+
+// Header scroll effect
+(function () {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 48);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+// Enhanced scroll-reveal (js-reveal, js-reveal-left, js-reveal-right, js-stagger)
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const revealClasses = ['.js-reveal', '.js-reveal-left', '.js-reveal-right', '.js-stagger'];
+  const targets = document.querySelectorAll(revealClasses.join(', '));
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+
+  targets.forEach(el => observer.observe(el));
+})();
